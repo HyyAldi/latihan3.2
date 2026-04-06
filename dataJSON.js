@@ -5,11 +5,11 @@ fetch("data.php")
 
         hasil.innerHTML = ""
 
-        data.forEach(item => {
+        data.forEach((item ,index) => {
             const tr = document.createElement("tr")
 
             tr.innerHTML = `
-            <td>${item.id}</td>
+            <td>${index + 1}</td>
             <td>${item.nisn}</td>
             <td>${item.nama}</td>
             <td>${item.jenisKelamin}</td>
