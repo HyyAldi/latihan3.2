@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Data Siswa/i</h2>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NISN</th>
+                <th>Nama</th>
+                <th>Jenis Kelamin</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody class="hasil">
+
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <h2>Tambah Data Siswa/i</h2>
+    <form action="" method="post" id="formSiswa">
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <td>Masukkan nisn</td>
+                <td><input type="text" id="nisn"></td>
+            </tr>
+            <tr>
+                <td>Masukkan nama</td>
+                <td><input type="text" id="nama"></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td><select name="" id="jenisKelamin" style="width: 100%;">
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit" style="width: 100%;">Tambah Data</button></td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script src="dataJSON.js"></script>
+</body>
+
+</html>
