@@ -14,13 +14,13 @@ fetch("data.php")
             <td>${item.nama}</td>
             <td>${item.jenisKelamin}</td>
             <td>
-                <button class="hapus" data-id="${item.id}">Hapus</button>
+                <button class="hapus" data-id="${item.id}" style="background-color: #ff0000 ">Hapus</button>
+                 <button class="edit" style="background-color: #05f7a7;">edit</button>
             </td>`
 
             hasil.appendChild(tr)
         })
-        document.querySelectorAll(".hapus").forEach(btn => {
-            btn.addEventListener("click", function () {
+        document.querySelectorAll(".hapus").forEach(btn => {btn.addEventListener("click", function () {
 
                 const id = this.getAttribute("data-id")
         
