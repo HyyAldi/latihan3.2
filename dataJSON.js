@@ -5,7 +5,7 @@ fetch("data.php")
 
         hasil.innerHTML = ""
 
-        data.forEach((item ,index) => {
+        data.forEach((item, index) => {
             const tr = document.createElement("tr")
 
             tr.innerHTML = `
@@ -15,15 +15,16 @@ fetch("data.php")
             <td>${item.jenisKelamin}</td>
             <td>
                 <button class="hapus" data-id="${item.id}" style="background-color: #ff0000 ">Hapus</button>
-                 <button class="edit" style="background-color: #05f7a7;">edit</button>
+                <button class="edit" style="background-color: #05f7a7;">edit</button>
             </td>`
 
             hasil.appendChild(tr)
         })
-        document.querySelectorAll(".hapus").forEach(btn => {btn.addEventListener("click", function () {
+        document.querySelectorAll(".hapus").forEach(btn => {
+            btn.addEventListener("click", function () {
 
                 const id = this.getAttribute("data-id")
-        
+
                 if (confirm("Yakin DECKKK??")) {
                     fetch("deleteData.php", {
                         method: "POST",
@@ -42,7 +43,7 @@ fetch("data.php")
     })
     .catch(error => console.log(error))
 
-document.querySelector("#formSiswa").addEventListener("submit", function(){
+document.querySelector("#formSiswa").addEventListener("submit", function () {
 
     let nisn = document.querySelector("#nisn").value
     let nama = document.querySelector("#nama").value
@@ -50,16 +51,16 @@ document.querySelector("#formSiswa").addEventListener("submit", function(){
 
     fetch("addData.php", {
         method: "POST",
-        headers:{"Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-            nisn:nisn,
-            nama:nama,
-            jenisKelamin:jenisKelamin
+            nisn: nisn,
+            nama: nama,
+            jenisKelamin: jenisKelamin
         })
     })
-    .then(res => res.json())
-    .then(data => {
-        alert(data.pesan)
-    })
-    .catch(error => console.log(error))
+        .then(res => res.json())
+        .then(data => {
+            alert(data.pesan)
+        })
+        .catch(error => console.log(error))
 })
